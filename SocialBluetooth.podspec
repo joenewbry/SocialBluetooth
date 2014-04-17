@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.platform      = :ios, '7.0'
     s.name          = 'SocialBluetooth'
-    s.version       = '0.0.1'
+    s.version       = '0.0.2'
     s.summary       = 'SocialBluetooth wrapper for CoreBluetooth'
     s.author        = {
         'Joe Newbry' => 'joenewbry@gmail.com'
