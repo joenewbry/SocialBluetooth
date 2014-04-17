@@ -40,10 +40,10 @@ NSString * const SBBroadcastCharacteristicUserProfileObjectId = @"2863DBD0-C65D-
 @implementation SBUserBroadcast
 
 // class methods
+static SBUserBroadcast *mySBUserBroadcast = nil;
 
 + (SBUserBroadcast *)createPeripheralWithLaunchOptions:(NSDictionary *)launchOptions
 {
-    static SBUserBroadcast *mySBUserBroadcast = nil;
     @synchronized(self) {
         if (mySBUserBroadcast == nil) mySBUserBroadcast = [[self alloc] initWithLaunchOptions:launchOptions];
     }
@@ -52,7 +52,6 @@ NSString * const SBBroadcastCharacteristicUserProfileObjectId = @"2863DBD0-C65D-
 
 + (SBUserBroadcast *)currentBroadcast
 {
-    static SBUserBroadcast *mySBUserBroadcast = nil;
     @synchronized(self) {
         if (mySBUserBroadcast == nil) mySBUserBroadcast = [[self alloc] init];
     }
@@ -63,7 +62,7 @@ NSString * const SBBroadcastCharacteristicUserProfileObjectId = @"2863DBD0-C65D-
 
 - (NSString *)objectId
 {
-    if (!_objectId) _objectId = @"Social Bluetooth is Cool!";
+    if (!_objectId) _objectId = @"Z0zYr8Fw4Y";
     return _objectId;
 }
 
@@ -72,6 +71,8 @@ NSString * const SBBroadcastCharacteristicUserProfileObjectId = @"2863DBD0-C65D-
     return [self initWithLaunchOptions:nil];
 }
 
+
+// should only be called once
 - (id)initWithLaunchOptions:(NSDictionary *)launchOptions
 {
     if (self = [super init]) {

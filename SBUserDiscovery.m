@@ -196,7 +196,9 @@ BOOL searchWhenReady;
         self.userData[@"objectId"] = [[NSString alloc] initWithData:myData encoding:NSUTF8StringEncoding];
 
         if ([self.delegate respondsToSelector:@selector(didReceiveUserID:)]) {
+            NSLog(@"User ID: %@ is sent to delegate", self.userData[@"objectId"] );
             [self.delegate didReceiveUserID:self.userData[@"objectId"]];
+
         }
 
     }
