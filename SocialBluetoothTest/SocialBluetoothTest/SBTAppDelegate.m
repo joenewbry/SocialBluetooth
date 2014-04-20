@@ -20,6 +20,9 @@
     [[SBUserBroadcast currentBroadcast] addServices];
     [[SBUserBroadcast currentBroadcast] startBroadcast];
 
+    [[UIDevice currentDevice] setBatteryMonitoringEnabled:TRUE];
+    
+
     return YES;
 }
 							
