@@ -8,11 +8,8 @@ Pod::Spec.new do |s|
         }
     s.homepage = 'http://www.joenewbry.me'
     s.license      = {
-                    :type => 'Commercial',
-                                :text => <<-LICENSE
-                                                          © 2013 - 2014 Joe Newbry. All rights reserved.
-                                                                                        LICENSE
-                                                                                                                        }    
+                    :type => 'Open Source',
+                    }
     s.source = {
         :git => 'https://github.com/joenewbry/SocialBluetooth.git',
         :tag => s.version.to_s
